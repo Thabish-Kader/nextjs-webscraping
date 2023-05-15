@@ -18,7 +18,7 @@ export async function GET(request: Request) {
 		const page = await browser.newPage();
 		await page.goto(url);
 		const screenshot = await page.screenshot({ type: "png" });
-
+		// set headers for binar response
 		const init = {
 			headers: {
 				"Content-Type": "image/png",
