@@ -11,12 +11,13 @@ export async function GET(request: Request) {
 			{ status: 400 }
 		);
 	}
-
 	let browser;
 	try {
 		browser = await puppeteer.launch();
 		const page = await browser.newPage();
 		await page.goto(url);
+
+		// TO GET THE SCREENSHOT IN BINARY FORMAT
 		const screenshot = await page.screenshot({ type: "png" });
 		// set headers for binar response
 		const init = {
