@@ -15,7 +15,7 @@ export async function GET(request: Request) {
 	let browser;
 
 	try {
-		browser = await puppeteer.launch();
+		browser = await puppeteer.launch({ headless: "new" });
 		const page = await browser.newPage();
 		await page.goto("https://www.amazon.com");
 		await page.type("#twotabsearchtextbox", userSearch);
