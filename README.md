@@ -1,4 +1,4 @@
-# Nextjs 13.4 + web scraping (Puppeteer
+# Nextjs 13.4 + web scraping (Puppeteer)
 
 <img align="left" alt="NextJS" width="50px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
 
