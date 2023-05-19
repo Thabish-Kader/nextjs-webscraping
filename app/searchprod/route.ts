@@ -2,13 +2,12 @@ import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 import * as cheerio from "cheerio";
 
-export async function GET(request: Request) {
-	const { searchParams } = new URL(request.url);
-	const userSearch = searchParams.get("userSearch");
+export async function POST(request: Request) {
+	const { searchPrompt: userSearch } = await request.json();
 
 	if (!userSearch) {
 		return NextResponse.json(
-			{ error: "Search parameter is required" },
+			{ error: "Search parameter not provided" },
 			{ status: 400 }
 		);
 	}
@@ -49,7 +48,7 @@ export async function GET(request: Request) {
 			})
 			.get();
 
-		const data = [];
+		const products = [];
 
 		for (let i = 0; i < titles.length; i++) {
 			const item = {
@@ -58,10 +57,10 @@ export async function GET(request: Request) {
 				review: reviews[i],
 				imageUrl: imageUrls[i],
 			};
-			data.push(item);
+			products.push(item);
 		}
 
-		return NextResponse.json({ data });
+		return NextResponse.json({ products });
 	} catch (error: any) {
 		return NextResponse.json(
 			{ error: `An error occurred: ${error.message}` },
