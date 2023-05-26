@@ -18,3 +18,5 @@
 # YT
 
 [![Next.js and Puppeteer for Data Extraction: Web Scrapping](https://ytcards.demolab.com/?id=uOF6RzKPutE&title=Next.js+and+Puppeteer+for+Data+Extraction%3A+Web+Scrapping&lang=en&timestamp=1685044815&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250 "Next.js and Puppeteer for Data Extraction: Web Scrapping")](https://www.youtube.com/watch?v=uOF6RzKPutE)
+
+Web scrapping is an automated process that extracts data from a website and exports it in a structured format. This can be very useful for in case the public site which you want to access data from does not have an api. 
